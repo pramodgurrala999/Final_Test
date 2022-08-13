@@ -184,7 +184,7 @@ elif choice == "Modules":
                     engine.setProperty("rate", 140)
                     engine.say("Hi there! I am Listening")
                     engine.runAndWait()
-                    with sr.Microphone() as source:
+                    with sr.Microphone(device_index=2) as source:
                         listener.adjust_for_ambient_noise(source)
                         print("Listening...")
                         audio = listener.listen(source)
